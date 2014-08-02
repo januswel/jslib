@@ -12,7 +12,7 @@ require(['jquery', 'jQuery.UI'], function ($) {
     });
 });
 
-require(['jquery', '../../../time-distance'], function ($, TimeDistance) {
+require(['jquery', '../../../time-distance'], function ($, _) {
     var parseDate = function (date) {
             var dateArray = date.split('-');
             return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
@@ -28,13 +28,13 @@ require(['jquery', '../../../time-distance'], function ($, TimeDistance) {
         $('#calculate').on({
             click: function () {
                 var targetDate = parseDate($('input.datepicker').val()),
-                    distance = new TimeDistance(new Date());
+                    currentDate = new Date();
 
-                $('#year').text(round(distance.year(targetDate), 3));
-                $('#month').text(round(distance.month(targetDate), 3));
-                $('#week').text(round(distance.week(targetDate), 3));
-                $('#day').text(round(distance.day(targetDate), 3));
-                $('#hour').text(round(distance.hour(targetDate), 3));
+                $('#year').text(round(_.yearDistance(currentDate, targetDate), 3));
+                $('#month').text(round(_.monthDistance(currentDate, targetDate), 3));
+                $('#week').text(round(_.weekDistance(currentDate, targetDate), 3));
+                $('#day').text(round(_.dayDistance(currentDate, targetDate), 3));
+                $('#hour').text(round(_.hourDistance(currentDate, targetDate), 3));
 
                 $('ul').css({
                     display: 'block'
