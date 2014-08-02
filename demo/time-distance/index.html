@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="author" content="janus_wel">
+
+  <meta name="description" content="time-distance.js demo">
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css" media="all">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" media="all">
+
+  <script src="scripts/require.config.js"></script>
+  <script data-main="main.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min.js"></script>
+
+  <title>time-distance.js demo</title>
+</head>
+
+<body>
+  <header>
+    <h1>time-distance.js demo</h1>
+  </header>
+
+  <section>
+    <form>
+      <div>
+        <input class="datepicker" type="text" value=""> <button id="calculate">show distance from now</button>
+      </div>
+    </form>
+
+    <ul>
+      <li>about <span id="year">?</span> years</li>
+
+      <li>about <span id="month">?</span> months</li>
+
+      <li>about <span id="week">?</span> weeks</li>
+
+      <li>about <span id="day">?</span> days</li>
+
+      <li>about <span id="hour">?</span> hours</li>
+    </ul>
+  </section>
+</body>
+</html>
